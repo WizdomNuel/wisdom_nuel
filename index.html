@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head id="head">
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="A multi page Portfolio website for Wisdom Nuel, built with HTML, CSS and JavaScript(Vanilla),"
+		/>
+		<title>Wisdom Nuel</title>
+		<link
+			rel="shortcut icon"
+			href="./assets/images/memoji_Image.png"
+			sizes="52x52"
+			type="image/x-icon"
+		/>
+		<link
+			id="style-sheet"
+			type="text/css"
+			rel="stylesheet"
+			href="./assets/styles/style.css"
+		/>
+		<!-- <link type="text/css" rel="stylesheet" href="./assets/styles/dark-mode.css"> -->
+		<script src="./assets/script/app.js" defer></script>
+	</head>
+	<body id="body-content--home">
+		<!-- code for header section -->
+		<header id="header">
+			<!-- container for logo image -->
+			<div class="image-logo">
+				<!-- <a href="./index.html"
+					><img
+						src="./assets/images/Logo.png"
+						alt="Logo"
+						class="image-logo__image"
+				/></a> -->
+				<h2 class="image-logo__image">Wisdom Nuel</h2>
+			</div>
+
+			<!-- nav bar section code  -->
+			<nav id="nav-bar">
+				<!-- nav bar item list -->
+				<ul class="nav-bar__list">
+					<li
+						onmouseover="magicLine('magic-line-left1')"
+						class="nav-bar__item"
+					>
+						<a href="#" class="nav-bar__link active">Home</a>
+					</li>
+
+					<li
+						onmouseover="magicLine('magic-line-left2')"
+						class="nav-bar__item"
+					>
+						<a href="work.html" class="nav-bar__link">Works</a>
+					</li>
+
+					<li
+						onmouseover="magicLine('magic-line-left3')"
+						class="nav-bar__item"
+					>
+						<a href="contact.html" class="nav-bar__link">Contact</a>
+					</li>
+				</ul>
+				<div class="nav-bar__list--after"></div>
+
+				<!-- container for menu button -->
+				<div class="menu-btn">
+					<img
+						src="./assets/images/icons/icon-hamburger.svg"
+						alt="open menu"
+						class="open-menu"
+					/>
+					<img
+						src="./assets/images/icons/icon-close.svg"
+						alt="close menu"
+						class="close-menu hidden"
+					/>
+				</div>
+
+				<!-- modals -->
+				<div id="menu-modal" class="Modal">
+					<div class="menu-opt">
+						<div>
+							<ul class="ModalList">
+								<li class="nav-bar__item">
+									<a class="nav-bar__link active" href="index.html"
+										>home</a
+									>
+								</li>
+								<li class="nav-bar__item">
+									<a class="nav-bar__link" href="work.html">works</a>
+								</li>
+								<li class="nav-bar__item">
+									<a class="nav-bar__link" href="contact.html"
+										>contact</a
+									>
+								</li>
+							</ul>
+						</div>
+						<a href="#about-img-id" class="menu-pic">
+							<img src="./assets/images/previews/menu-pic.png" alt="" />
+						</a>
+					</div>
+				</div>
+			</nav>
+
+			<div id="light-dark" class="light-mode"></div>
+		</header>
+
+		<!-- code for main section -->
+		<main id="main">
+			<!-- container for hero section -->
+			<section class="hero-section">
+				<div class="hero-section__content">
+					<h1 class="hero-section__title">
+						<span class="hero-section__title-text">
+							<span class="hero-section__title-text--main"
+								>Building Digital</span
+							>
+							<span class="hero-section__title-text--sub"
+								>Products & brands</span
+							>
+						</span>
+					</h1>
+					<!-- container for hero-section text -->
+					<p class="hero-section__text">
+						<span class="hero-section__text-text">
+							I am a software engineer + web developer. I specialize in
+							building Responsive Mobile & web applications, Front-end
+							Development using HTML, CSS, JavaScript, React and more...
+						</span>
+					</p>
+					<div class="contact-btn">
+						<a href="contact.html" class="contact-btn-link" role="button"
+							>Let's talk👋</a
+						>
+					</div>
+				</div>
+
+				<!-- container for hero image -->
+				<div class="hero-image">
+					<img
+						src="./assets/images/memoji_Image.png"
+						alt="hero image"
+						class="hero-image__image"
+					/>
+				</div>
+			</section>
+
+			<!-- container for about section -->
+			<section class="about-section">
+				<div class="about-section--main">
+					<div class="about-section__container desktop">
+						<h2 class="about-section__title">About me</h2>
+						<p class="about-section__text">
+							<span class="about-section__text-text">
+								<span class="about-section__text-text--main"
+									>Hi THere 👋, I'm</span
+								>
+								<br />
+								<span class="about-section__text-text--sub"
+									>WISDOM NUEL</span
+								>
+								<p class="about-section__text__paragraph">
+									SOFTWARE ENGINEER <br />
+									+ <br />
+									WEB DEVELOPER
+								</p>
+							</span>
+						</p>
+					</div>
+					<!-- about image container -->
+					<div id="about-img-id" class="about-image">
+						<img
+							src="./assets/images/Memoji-bg.png"
+							alt="about image"
+							class="about-image__image"
+						/>
+					</div>
+				</div>
+
+				<!-- about section description container -->
+				<div class="about-section__content">
+					<div class="about-section__content-main">
+						<div class="about-section__container mobile">
+							<h2 class="about-section__title">About me</h2>
+							<p class="about-section__text">
+								<span class="about-section__text-text">
+									<span class="about-section__text-text--main"
+										>Hi THere 👋, I'm</span
+									>
+									<br />
+									<span class="about-section__text-text--sub"
+										>WISDOM NUEL</span
+									>
+									<p class="about-section__text__paragraph">
+										SOFTWARE ENGINEER <br />
+										+ <br />
+										WEB DEVELOPER
+									</p>
+								</span>
+							</p>
+						</div>
+						<!-- about section paragraph text -->
+						<p class="about-section__text animate">
+							My name is Wisdom Nuel, Solution-oriented and problem solver with 4 years of experience building and
+							maintaining software and software architecture. Highly skilled in communication,
+							collaboration, and technical documentation. <br />
+							I am a software engineer; certified by Coursera and
+							IceHub Network in web application development. I am adept in
+							HTML5, CSS, JavaScript, React.js, and Git. <br> I have invested
+							4 years into software development and developed technical
+							leadership skills along the way.
+						</p>
+						<p class="about-section__text animate">
+							I have contributed to various Open source projects; <br> 1 Open-source
+							library: <br>
+							<a href="https://www.npmjs.com/package/should-render"
+								><strong><em>Should-Render</em></strong></a
+							> <br>
+							and I am a maintainer for an Open source project: <br>
+							<a href="https://github.com/Cloudlordd/Cloudlord-and-pals"
+								><strong
+									><em>IceHub Network Student Profile</em></strong
+								></a
+							>
+							<br />
+							In the space of 4 years, I have built a range of apps from
+							Landing pages to e-commerce web applications. I have worked
+							in diverse teams; I have led a team.
+						</p>
+						<p class="about-section__text animate">
+							I desire to attain and maintain a high degree of
+							professionalism and contribute significantly to
+							organizational growth and development through diverse
+							skills while providing innovative solutions capable of
+							satisfying and maintaining the corporate interest of my
+							employer and customers.
+						</p>
+					</div>
+
+					<!-- button to download cv -->
+					<div class="about-contact-btn">
+						<a
+							href="https://drive.google.com/file/d/1FiqctUqZ-KxI3ESOUB8mYuyeeeF4MSFo/view?usp=drive_link=download"
+							class="contact-btn-link"
+							>Download CV</a
+						>
+					</div>
+				</div>
+			</section>
+
+			<!-- container for service and workflow section -->
+			<section class="service-section">
+				<h2 class="service-section--title">What i have to offer!</h2>
+
+				<div class="service-content-grid">
+					<!-- service content description -->
+					<div class="service__content">
+						<div class="service-content__image-box">
+							<img
+								class="service-content__img"
+								src="./assets/images/webdesign.png"
+								alt=""
+							/>
+						</div>
+						<h3 class="service-content__title">Web App Design</h3>
+						<p class="service-content__text">
+							I work with certain design tools to create high-fidelity
+							Web application designs and prototypes responsive across
+							all device with. I design accessible and usable web
+							applications which aid business growth.
+						</p>
+					</div>
+					<!-- service content description -->
+					<div class="service__content">
+						<div class="service-content__image-box">
+							<img
+								class="service-content__img"
+								src="./assets/images/webdev.png"
+								alt=""
+							/>
+						</div>
+						<h3 class="service-content__title">Web App Development</h3>
+						<p class="service-content__text">
+							I use latest web technologies and best practices to develop
+							attractive websites which converts visitors to customers. I
+							develop creative and responsive website layouts to ensure a
+							high-quality and functional application.
+						</p>
+					</div>
+					<!-- service content description -->
+					<div class="service__content">
+						<div class="service-content__image-box">
+							<img
+								class="service-content__img"
+								src="./assets/images/webservice.png"
+								alt=""
+							/>
+						</div>
+						<h3 class="service-content__title">Web App Services</h3>
+						<p class="service-content__text">
+							I provide web application maintenance and support services
+							to meet the needs of the client. I have experience in
+							building and maintaining custom web applications for small
+							businesses, mid-sized businesses, and large businesses.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- container for recent project section -->
+			<section class="project-section">
+				<!-- project section header -->
+				<div class="project-section__content">
+					<h2 class="project-section__title">
+						Check out my Recent Projects
+					</h2>
+					<!-- container link to project page and github -->
+					<div class="project-section__nav">
+						<div class="project-section__nav__btn">
+							<a href="work.html" class="project-section__btn-link">
+								More works
+							</a>
+						</div>
+
+						<a
+							href="https://github.com/WizdomNuel"
+							class="project-section__btn-link__sub"
+						>
+							<img
+								src="./assets/images/icons/github.svg"
+								alt="Github"
+								class="social-media__image"
+							/>
+							<span class="">view on GitHub</span>
+						</a>
+					</div>
+				</div>
+
+				<div class="project-section__sample">
+					<!-- create flip card component -->
+					<div class="flip-card box1">
+						<div class="flip-card-inner">
+							<!-- flip card front side container -->
+							<div class="flip-card-front side">
+								<div class="blur bg-2"></div>
+								<div class="flip-card__content">
+									<div class="flip-card__image-box">
+										<img
+											src="./assets/images/previews/interior.jpg"
+											alt="project-1"
+											class="flip-card__image"
+										/>
+									</div>
+								</div>
+							</div>
+
+							<!-- flip card back side container -->
+							<div class="flip-card-back side">
+								<div class="blur"></div>
+								<div class="flip-card__content">
+									<h3 class="flip-card__title">
+										Interior Design Landing Page
+									</h3>
+									<p class="flip-card__text">
+										This is Shady-Rymes, an Interior design Landing
+										page that displays a collection of carpentry works
+										used for interiors designs.<br />
+										Users can browse through to pick a design of their
+										choice choice. <br />
+										This webpage also packs quite a number of features
+										that makes the user experience awesome
+									</p>
+									<a
+										href="https://interior-design-landing-page.netlify.app/"
+										class="flip-card__action"
+									>
+										View Project
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="flip-card box2">
+						<div class="flip-card-inner">
+							<!-- flip card front side container -->
+							<div class="flip-card-front side">
+								<div class="blur bg-2"></div>
+								<div class="flip-card__content">
+									<div class="flip-card__image-box">
+										<img
+											src="./assets/images/previews/loopstudio.jpg"
+											alt="project-1"
+											class="flip-card__image"
+										/>
+									</div>
+								</div>
+							</div>
+
+							<!-- flip card back side container -->
+							<div class="flip-card-back side">
+								<div class="blur"></div>
+								<div class="flip-card__content">
+									<h3 class="flip-card__title">
+										Loopstudio Landing Page
+									</h3>
+									<p class="flip-card__text">
+										This is a solution to the Loopstudios landing page
+										challenge on Frontend Mentor.This webpage is a
+										landing page of a studio that gives users
+										immersive experience in Interactive VR.
+										<br />
+										Built with wonderful animation that immerses the
+										user and serve is purpose as a center of
+										attraction.
+									</p>
+									<a
+										href="https://loopstudio-landings-page.netlify.app/"
+										class="flip-card__action"
+									>
+										View Project
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="flip-card box3">
+						<div class="flip-card-inner">
+							<!-- flip card front side container -->
+							<div class="flip-card-front side">
+								<div class="blur bg-2"></div>
+								<div class="flip-card__content">
+									<div class="flip-card__image-box">
+										<img
+											src="./assets/images/previews/crowdfund.jpg"
+											alt="project-1"
+											class="flip-card__image"
+										/>
+									</div>
+								</div>
+							</div>
+
+							<!-- flip card back side container -->
+							<div class="flip-card-back side">
+								<div class="blur"></div>
+								<div class="flip-card__content">
+									<h3 class="flip-card__title">
+										Crowdfunding Product page
+									</h3>
+									<p class="flip-card__text">
+										This is a client-side crowdfunding Landing page. A
+										solution to the Crowdfunding product page
+										challenge on Frontend Mentor. This webpage was
+										designed to seek funding for a bamboo monitor
+										riser project. <br />It was built with quite a lot
+										of features that makes it very interactive and
+										serves its purpose for crowdfunding.
+									</p>
+									<a
+										href="https://babboe1-crowdfunding-product-page.netlify.app/"
+										class="flip-card__action"
+									>
+										View Project
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="flip-card box4">
+						<div class="flip-card-inner">
+							<!-- flip card front side container -->
+							<div class="flip-card-front side">
+								<div class="blur bg-2"></div>
+								<div class="flip-card__content">
+									<div class="flip-card__image-box">
+										<img
+											src="./assets/images/previews/mobile-preview.png"
+											alt="project-1"
+											class="flip-card__image"
+										/>
+									</div>
+								</div>
+							</div>
+
+							<!-- flip card back side container -->
+							<div class="flip-card-back side">
+								<div class="blur"></div>
+								<div class="flip-card__content">
+									<h3 class="flip-card__title">
+										Room Design Homepage
+									</h3>
+									<p class="flip-card__text">
+										This is a solution to the Room homepage challenge
+										on Frontend Mentor. This webpage display a
+										collection of room designs in a carousel that the
+										user can browse through to pick their choice.<br />
+										This webpage was designed with quite a number of
+										features that serves its purpose as a Room Design
+										Homepage
+									</p>
+									<a
+										href="https://room-design-homepage.netlify.app/"
+										class="flip-card__action"
+									>
+										View Project
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="flip-card box5">
+						<div class="flip-card-inner">
+							<!-- flip card front side container -->
+							<div class="flip-card-front side">
+								<div class="blur bg-2"></div>
+								<div class="flip-card__content">
+									<div class="flip-card__image-box">
+										<img
+											src="./assets/images/previews/fylo.jpg"
+											alt="project-1"
+											class="flip-card__image"
+										/>
+									</div>
+								</div>
+							</div>
+
+							<!-- flip card back side container -->
+							<div class="flip-card-back side">
+								<div class="blur"></div>
+								<div class="flip-card__content">
+									<h3 class="flip-card__title">Fylo Landing Page</h3>
+									<p class="flip-card__text">
+										This is a client-side Landing page for Fylo. A
+										solution to Fylo landing page frontend mentor
+										challenge. <br />
+										Fylo stores all your most important files in one
+										secure location. Access them wherever you need,
+										share and collaborate with friends family, and
+										co-workers.
+									</p>
+									<a
+										href="https://fylo-landing-page-babboe1.netlify.app/"
+										class="flip-card__action"
+									>
+										View Project
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="flip-card box6">
+						<div class="flip-card-inner">
+							<!-- flip card front side container -->
+							<div class="flip-card-front side">
+								<div class="blur bg-2"></div>
+								<div class="flip-card__content">
+									<div class="flip-card__image-box">
+										<img
+											src="./assets/images/previews/sunny.jpg"
+											alt="project-1"
+											class="flip-card__image"
+										/>
+									</div>
+								</div>
+							</div>
+
+							<!-- flip card back side container -->
+							<div class="flip-card-back side">
+								<div class="blur"></div>
+								<div class="flip-card__content">
+									<h3 class="flip-card__title">
+										Sunnyside Landing Page
+									</h3>
+									<p class="flip-card__text">
+										This is a solution to the Sunnyside agency landing
+										page challenge on Frontend Mentor.
+										<br />
+										This webpage ia a client side Landing page of a
+										brand that offers graphic designs and photography
+										services.
+									</p>
+									<a
+										href="https://sunnysides-landingpage.netlify.app/"
+										class="flip-card__action"
+									>
+										View Project
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="cartoon-pic">
+						<img
+							src="./assets/images/previews/leGNIwyP_male_2_cartoon20.png"
+							alt=""
+						/>
+					</div>
+				</div>
+			</section>
+
+			<!-- container for Tech stack section -->
+			<section class="stack-section">
+				<h2 class="stack-section--title">Technical Skills</h2>
+
+				<!-- currently using stack -->
+				<div class="stack-section__content">
+					<h3 class="gap3">USING NOW:</h3>
+					<div class="stack-section__content--list">
+						<!-- container for stack -->
+						<div class="stack-section__content--item">
+							<div class="stack-section__content--item--icon">
+								<img src="./assets/images/icons/HTML5.svg" alt="" />
+							</div>
+							<div class="stack-section__content--item--text">
+								<h3>HTML5</h3>
+							</div>
+						</div>
+
+						<!-- container for stack -->
+						<div class="stack-section__content--item">
+							<div class="stack-section__content--item--icon">
+								<img src="./assets/images/icons/CSS.svg" alt="" />
+							</div>
+							<div class="stack-section__content--item--text">
+								<h3>CSS3</h3>
+							</div>
+						</div>
+
+						<!-- container for stack -->
+						<div class="stack-section__content--item">
+							<div class="stack-section__content--item--icon">
+								<img src="./assets/images/icons/sass.svg" alt="" />
+							</div>
+							<div class="stack-section__content--item--text">
+								<h3>SASS</h3>
+							</div>
+						</div>
+
+						<!-- container for stack -->
+						<div class="stack-section__content--item">
+							<div class="stack-section__content--item--icon">
+								<img
+									src="./assets/images/icons/javascript.svg"
+									alt=""
+								/>
+							</div>
+							<div class="stack-section__content--item--text">
+								<h3>JAVASCRIPT</h3>
+							</div>
+						</div>
+					</div>
+
+					<!-- container for stack -->
+					<div class="stack-section__content--list">
+						<div class="stack-section__content--item">
+							<div class="stack-section__content--item--icon">
+								<img src="./assets/images/icons/react.svg" alt="" />
+							</div>
+							<div class="stack-section__content--item--text">
+								<h3>REACT</h3>
+							</div>
+						</div>
+
+						<!-- container for stack -->
+						<div class="stack-section__content--item">
+							<div class="stack-section__content--item--icon">
+								<img src="./assets/images/icons/git.svg" alt="" />
+							</div>
+							<div class="stack-section__content--item--text">
+								<h3>GIT</h3>
+							</div>
+						</div>
+
+						<!-- container for stack -->
+						<div class="stack-section__content--item">
+							<div class="stack-section__content--item--icon">
+								<img src="./assets/images/icons/figma.svg" alt="" />
+							</div>
+							<div class="stack-section__content--item--text">
+								<h3>FIGMA</h3>
+							</div>
+						</div>
+
+						<!-- container for stack -->
+						<div class="stack-section__content--item">
+							<div class="stack-section__content--item--icon">
+								<img src="./assets/images/icons/bootsrap.svg" alt="" />
+							</div>
+							<div class="stack-section__content--item--text">
+								<h3>BOOTSTRAP</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- stack to be learnt-->
+				<div class="stack-section__content">
+					<h3 class="gap3">LEARNING:</h3>
+					<div class="stack-section__content--list">
+						<!-- container for stack -->
+						<div class="stack-section__content--item">
+							<div class="stack-section__content--item--icon">
+								<img
+									src="./assets/images/icons/typescript.svg"
+									alt=""
+								/>
+							</div>
+							<div class="stack-section__content--item--text">
+								<h3>TYPESCRIPT</h3>
+							</div>
+						</div>
+
+						<!-- container for stack -->
+						<div class="stack-section__content--item">
+							<div class="stack-section__content--item--icon">
+								<img src="./assets/images/icons/vue.svg" alt="" />
+							</div>
+							<div class="stack-section__content--item--text">
+								<h3>VUE</h3>
+							</div>
+						</div>
+
+						<!-- container for stack -->
+						<div class="stack-section__content--item">
+							<div class="stack-section__content--item--icon">
+								<img src="./assets/images/icons/node.svg" alt="" />
+							</div>
+							<div class="stack-section__content--item--text">
+								<h3>NODE.js</h3>
+							</div>
+						</div>
+
+						<!-- container for stack -->
+						<div class="stack-section__content--item">
+							<div class="stack-section__content--item--icon">
+								<img src="./assets/images/icons/graphql.svg" alt="" />
+							</div>
+							<div class="stack-section__content--item--text">
+								<h3>GraphQL</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- container for message section -->
+			<section class="message-section">
+				<div class="message-section__content">
+					<h3 class="message-section--title">
+						<label for="email-id">Let's create something together!</label>
+					</h3>
+					<!-- create form -->
+					<form action="" class="message-section--form">
+						<input
+							type="email"
+							name="email-id"
+							placeholder="Enter your email"
+							id="email-id"
+							pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+							required
+						/>
+						<!-- submit button -->
+						<input id="submit" type="submit" value="Be my friend" />
+					</form>
+				</div>
+				<div class="cartoon-pic2">
+					<img src="./assets/images/previews/cartoon-pic2.png" alt="" />
+				</div>
+			</section>
+
+			<!-- random shapes -->
+			<div class="random-shapes">
+				<div class="shape rectangle"></div>
+				<div class="shape rounded"></div>
+				<div class="shape bottom"></div>
+				<div class="shape circle"></div>
+				<div class="shape triangle"></div>
+				<div class="shape diamond"></div>
+				<div class="shape parallelogram"></div>
+				<div class="shape rectangle1"></div>
+				<div class="shape rounded1"></div>
+				<div class="shape triangle1"></div>
+			</div>
+		</main>
+
+		<!-- code for footer section -->
+		<footer id="footer">
+			<!-- modal pop up for message -->
+			<div class="gratitude">
+				<div class="gratitude__image-box">
+					<img
+						src="./assets/images/previews/thank-you-emoji-16.jpg"
+						alt="Logo"
+						class="gratitude__image"
+					/>
+				</div>
+				<p class="gratitude__text">
+					Thank you for Sending a message 🙏<br />
+					we Promise to reach out to you as soon as possible
+				</p>
+				<div class="gratitude__btn-box">
+					<button class="gratitude__button" type="submit">Got It!</button>
+				</div>
+			</div>
+
+			<!-- container for footer content -->
+			<div class="footer-content">
+				<!-- container for logo image -->
+				<div class="image-logo">
+					<a href="./index.html"
+						><img
+							src="./assets/images/Logo.png"
+							alt="Logo"
+							class="image-logo__image"
+					/></a>
+				</div>
+
+				<div class="footer-section-content">
+					<!-- container for footer list items -->
+					<ul class="footer__list">
+						<li class="footer-list__item">
+							<a href="index.html" class="footer-item__link">Home</a>
+						</li>
+						<li class="footer-list__item">
+							<a href="work.html" class="footer-item__link">Works</a>
+						</li>
+						<li class="footer-list__item">
+							<a href="contact.html" class="footer-item__link"
+								>Contact</a
+							>
+						</li>
+					</ul>
+					<!-- container for social media icons -->
+					<div class="social-media">
+						<a
+							href="https://github.com/WizdomNuel"
+							class="social-media__link"
+							><img
+								src="./assets/images/icons/github.svg"
+								alt="Github"
+								class="social-media__image"
+						/></a>
+						<a
+							href="https://www.linkedin.com/in/"
+							class="social-media__link"
+							><img
+								src="./assets/images/icons/linkedIn.svg"
+								alt="linkedin"
+								class="social-media__image"
+						/></a>
+						<a
+							href="https://twitter.com/wisdom__nuel"
+							class="social-media__link"
+							><img
+								src="./assets/images/icons/twitter.svg"
+								alt="twitter"
+								class="social-media__image"
+						/></a>
+						<a
+							href="https://wa.me/2348108619595?text=Hello,%20I%20would%20like%20to%20be%20your%20friend!!"
+							class="social-media__link"
+							><img
+								src="./assets/images/icons/whatsapp.svg"
+								alt="What's app"
+								class="social-media__image"
+						/></a>
+					</div>
+				</div>
+			</div>
+
+			<!-- code for attribution -->
+			<div class="footer-attribution">
+				&copy; 2025 All rights reserved. Coded by
+				<a href="https://github.com/WizdomNuel">Wisdom Nuel</a>.
+			</div>
+
+			<!-- backdrop modal -->
+			<button id="backdrop"></button>
+		</footer>
+	</body>
+</html>

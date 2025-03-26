@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head id="head">
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="A multi page Portfolio website for babboeCodes, built with HTML, CSS and JavaScript(Vanilla),">
+		<title>Contact me | Wisdom Nuel</title>
+		<script src="./assets/script/dark-mode.js"></script>
+		<link
+			rel="shortcut icon"
+			sizes="52x52"
+			href="./assets/images/memoji_Image.png"
+			type="image/x-icon"
+		/>
+		<link type="text/css" rel="stylesheet" href="./assets/styles/style.css" />
+		<link
+			type="text/css"
+			rel="stylesheet"
+			href="./assets/styles/contact.css"
+		/>
+		<!-- <link type="text/css" rel="stylesheet" href="./assets/styles/dark-mode.css"> -->
+
+		<script src="./assets/script/app.js" defer></script>
+	</head>
+	<body id="body-content--home">
+		<!-- code for header section -->
+		<header id="header">
+			<!-- container for logo image -->
+			<div class="image-logo">
+				<a href="index.html">
+					<!-- <img
+						src="./assets/images/Logo.png"
+						alt="Logo"
+						class="image-logo__image"
+				    /> -->
+					<h2 class="image-logo__image">Wisdom Nuel</h2>
+			    </a>
+			</div>
+
+			<!-- nav bar section code  -->
+			<nav id="nav-bar">
+				<!-- nav bar item list -->
+				<ul class="nav-bar__list">
+					<li
+						onmouseover="magicLine('magic-line-left1')"
+						class="nav-bar__item"
+					>
+						<a href="index.html" class="nav-bar__link">Home</a>
+					</li>
+
+					<li
+						onmouseover="magicLine('magic-line-left2')"
+						class="nav-bar__item"
+					>
+						<a href="work.html" class="nav-bar__link">Works</a>
+					</li>
+
+					<li
+						onmouseover="magicLine('magic-line-left3')"
+						class="nav-bar__item"
+					>
+						<a href="contact.html" class="nav-bar__link active"
+							>Contact</a
+						>
+					</li>
+				</ul>
+				<div class="nav-bar__list--after"></div>
+
+				<!-- container for menu button -->
+				<div class="menu-btn">
+					<img
+						src="./assets/images/icons/icon-hamburger.svg"
+						alt="open menu"
+						class="open-menu"
+					/>
+					<img
+						src="./assets/images/icons/icon-close.svg"
+						alt="close menu"
+						class="close-menu hidden"
+					/>
+				</div>
+
+				<!-- modals -->
+				<button id="backdrop"></button>
+				<div id="menu-modal" class="Modal">
+					<div class="menu-opt">
+						<div>
+							<ul class="ModalList">
+								<li class="nav-bar__item">
+									<a class="nav-bar__link" href="index.html">home</a>
+								</li>
+								<li class="nav-bar__item">
+									<a class="nav-bar__link" href="work.html">works</a>
+								</li>
+								<li class="nav-bar__item">
+									<a class="nav-bar__link active" href="contact.html"
+										>contact</a
+									>
+								</li>
+							</ul>
+						</div>
+						<a href="#" class="menu-pic">
+							<img src="./assets/images/previews/menu-pic.png" alt="" />
+						</a>
+					</div>
+				</div>
+			</nav>
+
+			<div id="light-dark" class="light-mode"></div>
+		</header>
+
+		<main id="main">
+			<!--container for main section title  -->
+			<section class="main-section--title">
+				<h1 class="">
+					<span class="main-section--title__sub">
+						<span class="home-text">HOME</span> / CONTACT
+					</span>
+					<div class="main-section--title__main">Reach Out To Me</div>
+				</h1>
+
+				<div class="cartoon-pic">
+					<img
+						src="./assets/images/previews/leGNIwyP_male_2_cartoon20.png"
+						alt=""
+					/>
+				</div>
+			</section>
+
+			<!-- container for contact me form -->
+			<section class="main-section--content">
+				<div class="main-section__main">
+					<a href="tel: +2349012207356" class="">
+						<img src="./assets/images/icons/contact.svg" alt="" />
+					</a>
+					<h3 class="main-section__main--heading">Contact me at</h3>
+					<p class="main-section__main--paragraph">
+						<a href="tel: +2349012207356">+2348108619595</a>
+					</p>
+				</div>
+
+				<!-- create form -->
+				<form class="contact-form-action">
+					<input
+						type="text"
+						id="full-name"
+						name="full-name"
+						placeholder="Your Name"
+						pattern="[a-zA-Z'-'\s]*"
+						required
+					/>
+					<input
+						type="email"
+						name="email-tag"
+						placeholder="username@example.com"
+						id="email-tag"
+						pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+						required
+					/>
+					<textarea
+						name="user-message"
+						id="user-message"
+						cols="30"
+						rows="10"
+						placeholder="Enter your message"
+						required
+					></textarea>
+					<!-- submit button -->
+					<div class="contact-button">
+						<button class="contact-button-link" type="submit">
+							Let's talk👋
+						</button>
+					</div>
+				</form>
+			</section>
+
+			<!-- Location section -->
+			<section class="location-section">
+				<h2 class="location__title">Locate Me</h2>
+				<div class="">
+					<div id="map-canvas"></div>
+					<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+					<script>
+						var myLatlng = new google.maps.LatLng(6.5244, 3.3792);
+						var mapOptions = {
+							zoom: 4,
+							center: myLatlng,
+						};
+						var map = new google.maps.Map(
+							document.getElementById('map-canvas'),
+							mapOptions,
+						);
+						var marker = new google.maps.Marker({
+							position: myLatlng,
+							map: map,
+							title: 'Uluru (Ayers Rock)',
+							//    zIndex: Math.round(myLatlng.lat() * -100000) << 5
+						});
+					</script>
+				</div>
+			</section>
+
+			<!-- container for message section -->
+			<section class="message-section visible">
+				<div class="message-section__content visible">
+					<h3 class="message-section--title">
+						<label for="email-id">Let's create something together!</label>
+					</h3>
+					<!-- create form -->
+					<form action="" class="message-section--form">
+						<input
+							type="email"
+							name="email-id"
+							placeholder="Enter your email"
+							id="email-id"
+							pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+							required
+						/>
+						<!-- submit button -->
+						<input id="submit" type="submit" value="Be my friend" />
+					</form>
+				</div>
+				<div class="cartoon-pic2 visible">
+					<img src="./assets/images/previews/cartoon-pic2.png" alt="" />
+				</div>
+			</section>
+
+			<!-- random shapes -->
+			<div class="random-shapes">
+				<div class="shape rectangle"></div>
+				<div class="shape rounded"></div>
+				<div class="shape bottom"></div>
+				<div class="shape circle"></div>
+				<div class="shape triangle"></div>
+				<div class="shape diamond"></div>
+				<div class="shape parallelogram"></div>
+			</div>
+		</main>
+
+		<!-- code for footer section -->
+		<footer id="footer">
+			<!-- modal pop up for message -->
+			<div class="gratitude">
+				<div class="gratitude__image-box">
+					<img
+						src="./assets/images/previews/thank-you-emoji-16.jpg"
+						alt="Logo"
+						class="gratitude__image"
+					/>
+				</div>
+				<p class="gratitude__text">
+					Thank you for Sending a message 🙏<br />
+					we Promise to reach out to you as soon as possible
+				</p>
+				<div class="gratitude__btn-box">
+					<button class="gratitude__button" type="submit">Got It!</button>
+				</div>
+			</div>
+
+			<!-- container for footer content -->
+			<div class="footer-content">
+				<!-- container for logo image -->
+				<div class="image-logo">
+					<a href="index.html">
+						<!-- <img
+							src="./assets/images/Logo.png"
+							alt="Logo"
+							class="image-logo__image"
+					    /> -->
+						<h2 class="image-logo__image">Wisdom Nuel</h2>
+				    </a>
+				</div>
+
+				<div class="footer-section-content">
+					<!-- container for footer list items -->
+					<ul class="footer__list">
+						<li class="footer-list__item">
+							<a href="index.html" class="footer-item__link">Home</a>
+						</li>
+						<li class="footer-list__item">
+							<a href="work.html" class="footer-item__link">Works</a>
+						</li>
+						<li class="footer-list__item">
+							<a href="contact.html" class="footer-item__link"
+								>Contact</a
+							>
+						</li>
+					</ul>
+					<!-- container for social media icons -->
+					<div class="social-media">
+						<a
+							href="https://github.com/WizdomNuel"
+							class="social-media__link"
+							><img
+								src="./assets/images/icons/github.svg"
+								alt="Github"
+								class="social-media__image"
+						/></a>
+						<a
+							href="https://www.linkedin.com/in/"
+							class="social-media__link"
+							><img
+								src="./assets/images/icons/linkedIn.svg"
+								alt="linkedin"
+								class="social-media__image"
+						/></a>
+						<a
+							href="https://twitter.com/wisdom__nuel"
+							class="social-media__link"
+							><img
+								src="./assets/images/icons/twitter.svg"
+								alt="twitter"
+								class="social-media__image"
+						/></a>
+						<a
+							href="https://wa.me/2348108619595?text=Hello,%20I%20would%20like%20to%20be%20your%20friend!!"
+							class="social-media__link"
+							><img
+								src="./assets/images/icons/whatsapp.svg"
+								alt="What's app"
+								class="social-media__image"
+						/></a>
+					</div>
+				</div>
+			</div>
+
+			<!-- code for attribution -->
+			<div class="footer-attribution">
+				&copy; 2025 All rights reserved. Coded by
+				<a href="https://github.com/WizdomNuel">Wisdom Nuel</a>.
+			</div>
+		</footer>
+	</body>
+</html>
