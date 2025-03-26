@@ -19,7 +19,7 @@ const AboutSection = () => {
                      </span>
                      <br />
                      <span className="about-section__text-text--sub">
-                        ABIOLA AYODELE
+                        WISDOM NUEL
                      </span>
                   </span>
                </p>
@@ -31,11 +31,12 @@ const AboutSection = () => {
             </div>
             {/* <!-- about image container --> */}
             <div id="about-img-id" className="about-image">
-               <img
-                  src={displayPicture}
-                  alt="about"
-                  className="about-image__image"
-               />
+               // <img
+               //    src={displayPicture}
+               //    alt="about"
+               //    className="about-image__image"
+               // />
+               <h2 className="about-image__image">Wisdom Nuel</h2>
             </div>
          </div>
          {/* <!-- about section description container --> */}
@@ -50,7 +51,7 @@ const AboutSection = () => {
                         </span>
                         <br />
                         <span className="about-section__text-text--sub">
-                           ABIOLA AYODELE
+                           WISDOM NUEL
                         </span>
                      </span>
                   </p>
